@@ -10,7 +10,7 @@ const MypageAuctionCard = ({auction}) => {
   const thumbnailImage = auction.auctionImageDtoList.find((image) => image.thumbnail === true);
 
   const imageSrc = thumbnailImage
-    ? `https://kr.object.ncloudstorage.com/${bucketName}/${thumbnailImage.filepath}${thumbnailImage.filename}`
+    ? `https://pub-545575e178394a0e85ed3d8f1bcaa827.r2.dev/${thumbnailImage.filepath}${thumbnailImage.filename}`
     : '/images/defaultFileImg.png';
 
 

@@ -85,8 +85,9 @@ function Conveyor() {
                 {bestProducts.concat(bestProducts).map((auction, index) => {
                     const thumbnailImage = auction.auctionImageDtoList.find(image => image.thumbnail === true);
                     const imageSrc = thumbnailImage && thumbnailImage.filetype === 'image'
-                        ? `https://kr.object.ncloudstorage.com/${bucketName}/${thumbnailImage.filepath}${thumbnailImage.filename}`
-                        : `${defaultFileImg}`;
+                        ? `https://pub-545575e178394a0e85ed3d8f1bcaa827.r2.dev/${thumbnailImage.filepath}${thumbnailImage.filename}`
+                        : `${defaultFileImg}`;  // 이미지가 없거나 썸네일이 아닐 경우 기본 이미지
+
 
                     return (
                         <li key={index}>
